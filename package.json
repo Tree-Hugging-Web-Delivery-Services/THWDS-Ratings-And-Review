@@ -1,0 +1,28 @@
+{
+  "name": "thwds-ratings-and-reviews-api",
+  "version": "1.0.0",
+  "description": "SDC-Reviews-API-Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec 'mocha -R min'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tree-Hugging-Web-Delivery-Services/THWDS-Ratings-And-Reviews-API.git"
+  },
+  "author": "MM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tree-Hugging-Web-Delivery-Services/THWDS-Ratings-And-Reviews-API/issues"
+  },
+  "homepage": "https://github.com/Tree-Hugging-Web-Delivery-Services/THWDS-Ratings-And-Reviews-API#readme",
+  "dependencies": {
+    "mocha": "^8.3.2",
+    "mongoose": "^5.12.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-plugin-mocha": "^8.1.0"
+  }
+}
