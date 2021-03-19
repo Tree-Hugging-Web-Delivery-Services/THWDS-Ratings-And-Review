@@ -6,7 +6,10 @@ before((done) => {
     useUnifiedTopology: true,
   });
   mongoose.connection
-    .once('open', () => console.log('Success'))
+    .once('open', () => {
+      console.log('Success')
+      done();
+    })
     .on('error', (error) => console.warn('Warning: ', error))
 });
 
