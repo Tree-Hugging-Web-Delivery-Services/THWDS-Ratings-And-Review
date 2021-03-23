@@ -1,18 +1,16 @@
 const Reviews = require('../models/review');
 
 module.exports = {
-  getProducts(req, res) {
+  getProducts(req, res, next) {
     const requestQueryParams = req.query;
     res.send(requestQueryParams);
   },
 
-  postReview(req, res) {
+  postReview(req, res, next) {
     const reviewProps = req.body;
     Reviews.create(reviewProps)
-      .then(response => {
-        res.send(response)
-      })
-      .catch(error => res.status(400).send('Error occurred'));
+      .then(response => res.send(response))
+      .catch(next);
   },
 
   metaRequest(req, res) {
