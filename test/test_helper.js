@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 before((done) => {
-  mongoose.connect('mongodb://localhost/reviews_test', {
+  mongoose.connect('mongodb://localhost/SDC-Reviews', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
