@@ -35,7 +35,10 @@ const ReviewSchema = new Schema ({
     type: String,
     required: [true, 'Reviewer name is required.']
   },
-  reviewer_email: String,
+  reviewer_email: {
+    type: String,
+    required: [true, 'Reviewer email is required.']
+  },
   helpfulness: {
     type: Number,
     default: 0,

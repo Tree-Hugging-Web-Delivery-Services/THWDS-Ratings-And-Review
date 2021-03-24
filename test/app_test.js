@@ -34,13 +34,13 @@ describe('The express app /reviews route', () => {
   it('handles a POST request at /reviews', (done) => {
     const testReview = {
       product_id: 18080,
-      review_id: 20000,
+      review_id: 200007849578973485739239,
       rating: 5,
       summary: 'Summarizing test',
       body: 'Test bod bod bod',
       recommend: true,
       reviewer_name: 'Askerer of the question',
-      email: 'Where the askerer can be reached',
+      reviewer_email: 'Where the askerer can be reached',
       photos: ['testPhoto', 'moreOtherTestPhoto'],
       characteristics: {
         60623: 5,
