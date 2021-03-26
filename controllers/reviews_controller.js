@@ -1,4 +1,4 @@
-const Reviews = require('../models/review');
+const Reviews = require('../models/reviews');
 
 module.exports = {
   getProducts(req, res, next) {

@@ -41,7 +41,7 @@ describe('The express app /reviews route', () => {
       recommend: true,
       reviewer_name: 'Askerer of the question',
       reviewer_email: 'Where the askerer can be reached',
-      photos: ['testPhoto', 'moreOtherTestPhoto'],
+      photos: [{ id: 82405934759374592, url: 'testPhoto' }, { id:75986734057609834, url: 'moreOtherTestPhoto' }],
       characteristics: {
         60623: 5,
         60624: 5,

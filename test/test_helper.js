@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 before((done) => {
-  mongoose.connect('mongodb://localhost/SDC-Reviews_test', {
+  mongoose.connect('mongodb://localhost:27017/sdcReviewsTestDb', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
@@ -13,10 +13,13 @@ before((done) => {
     .on('error', (error) => console.warn('Warning: ', error))
 });
 
-beforeEach((done) => {
-  const { reviews } = mongoose.connection.collections;
-  reviews.drop()
-    .then(() => done())
-    //ERROR HANDLING UPON FIRST TEST
-    .catch(() => done());
+beforeEach(async () => {
+  const collections = await mongoose.connection.db.collections();
+  for (let collection of collections) {
+    const colName = collection.s.namespace.collection;
+    if (colName === 'reviews' || colName === 'chars') {
+      // console.log('triggered: ', colName);
+      await mongoose.connection.collection(colName).drop()
+    }
+  }
 });

@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ReviewSchema = new Schema ({
+const PhotosSchema = new Schema({ id: Number, url: String });
+const ReviewsSchema = new Schema({
   review_id: {
     type: Number,
     required: [true, 'Body is required.']
@@ -43,9 +44,9 @@ const ReviewSchema = new Schema ({
     type: Number,
     default: 0,
   },
-  photos: [ String ],
+  photos: [PhotosSchema],
 });
 
-const Reviews = mongoose.model('reviews', ReviewSchema);
+const Reviews = mongoose.model('reviews', ReviewsSchema);
 
 module.exports = Reviews;
