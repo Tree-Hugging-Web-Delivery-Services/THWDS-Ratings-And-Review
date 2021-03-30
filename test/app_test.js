@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const Reviews = mongoose.model('reviews');
 
-describe('The express app /reviews route', () => {
+xdescribe('The express app /reviews route', () => {
   it('handles a GET request at /reviews with product_id queries', (done) => {
     request(app)
       .get('/reviews?product_id=18080')
